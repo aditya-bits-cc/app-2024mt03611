@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dep-2024mt03611
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: flask-app-2024mt03611
+  template:
+    metadata:
+      labels:
+        app: flask-app-2024mt03611
+    spec:
+      containers:
+      - name: flask-app
+        image: img-2024mt03611
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8000
+        envFrom:
+        - configMapRef:
+            name: config-2024mt03611
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"

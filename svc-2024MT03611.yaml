@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-2024mt03611
+spec:
+  type: LoadBalancer
+  selector:
+    app: flask-app-2024mt03611
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8000
+      protocol: TCP
