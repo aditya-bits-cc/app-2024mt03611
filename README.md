@@ -1,6 +1,7 @@
 # app-2024mt03611
 
 A simple app is created using Flask, built using docker, deployed on kuberentes and monitored via prometheus with cadvisor enabled
+The application has been developed and tested on Windows 11 with Docker Desktop and Kuberetes installed in ti
 
 # DevOps Assignment - Flask Application Deployment
 
@@ -23,8 +24,8 @@ A simple app is created using Flask, built using docker, deployed on kuberentes 
 
 1. Create virtual environment:
 ```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
+python -m venv venv
+.\venv\Scripts\Activate.ps1
 ```
 
 2. Install dependencies:
@@ -71,25 +72,22 @@ python -m uvicorn main:asgi_app --reload --host 127.0.0.1 --port 8000
 ## Task 2: Dockerize the Backend Application
 
 ### Prerequisites
-- Docker installed and running
-
-### Dockerfile Configuration
-Created `Dockerfile` with:
-- Base image: python:3.11-slim
-- Working directory: /app
-- Dependencies installation
-- Environment variables configuration
-- Port exposure: 8000d
+- Docker desktop installed and running
 
 ### Building the Image
-```bash
+```powershell
 docker build -t img-2024mt03611 .
+```
+
+### Verify the image is present
+```powershell
+docker image ls
 ```
 
 ## Task 3: Run the Docker Container
 
 ### Running Container
-```bash
+```powershell
 docker run --name cnr-2024mt03611 -p 8000:8000 img-2024mt03611
 ```
 
