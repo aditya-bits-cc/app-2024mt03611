@@ -188,8 +188,8 @@ kubectl get svc prometheus-service
 ```
 
 2. Access Prometheus UI at:
-- If using Docker Desktop: http://localhost:<nodePort>
-- If using remote cluster: http://<node-ip>:<nodePort>
+- If using Docker Desktop: [http://localhost:<nodePort>](http://localhost:<nodePort>)
+- If using remote cluster: [http://<node-ip>:<nodePort>](http://<node-ip>:<nodePort>)
 
 ### Available Metrics
 
