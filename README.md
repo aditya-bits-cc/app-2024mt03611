@@ -1,7 +1,7 @@
 # app-2024mt03611
 
-A simple app is created using Flask, built using docker, deployed on kuberentes and monitored via prometheus with cadvisor enabled
-The application has been developed and tested on Windows 11 with Docker Desktop and Kuberetes installed in ti
+A simple app is created using Flask, built using docker, deployed on kubernetes and monitored via prometheus with cadvisor enabled
+The application has been developed and tested on Windows 11 with Docker Desktop and kubernetes installed in it
 
 # DevOps Assignment - Flask Application Deployment
 

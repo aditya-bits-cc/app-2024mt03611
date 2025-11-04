@@ -23,7 +23,6 @@ data:
             regex: flask-app-2024mt03611
             action: keep
           
-      # THIS IS THE MODIFIED BLOCK
       # It scrapes Kubelet's cAdvisor metrics via the K8s API server proxy
       - job_name: 'kubernetes-cadvisor'
         scheme: https
@@ -47,7 +46,6 @@ data:
             replacement: kubernetes.default.svc:443
             
           # Rewrite the metrics path to proxy through the API server
-          # /api/v1/nodes/<node-name>/proxy/metrics/cadvisor
           - source_labels: [__meta_kubernetes_node_name]
             regex: (.*)
             target_label: __metrics_path__
